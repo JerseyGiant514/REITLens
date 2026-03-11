@@ -1,0 +1,5 @@
+{
+  "name": "REIT Lens - Institutional Analytics",
+  "description": "A high-fidelity REIT research terminal providing executive-level insights into U.S. Public REITs, focusing on cash flow trends, valuation multiples, and debt maturity walls using an Alethia-inspired UI.",
+  "requestFramePermissions": []
+}

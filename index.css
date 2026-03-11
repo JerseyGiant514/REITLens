@@ -1,0 +1,3 @@
+/* REITLens global styles */
+@import "tailwindcss";
+@config "./tailwind.config.js";
