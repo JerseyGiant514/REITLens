@@ -1,0 +1,45 @@
+name: Deploy Supabase Edge Functions
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'supabase/functions/**'
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  deploy:
+    name: Deploy Edge Functions
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Supabase CLI
+        uses: supabase/setup-cli@v1
+        with:
+          version: latest
+
+      - name: Deploy gemini-proxy function
+        run: supabase functions deploy gemini-proxy --project-ref ${{ secrets.SUPABASE_PROJECT_REF }}
+        env:
+          SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+
+      - name: Deploy market-data function
+        run: supabase functions deploy market-data --project-ref ${{ secrets.SUPABASE_PROJECT_REF }}
+        env:
+          SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+
+# -------------------------------------------------------------------
+# REQUIRED GITHUB SECRETS (set in repo Settings > Secrets > Actions):
+#
+#   SUPABASE_ACCESS_TOKEN   - Personal access token from
+#                             https://supabase.com/dashboard/account/tokens
+#   SUPABASE_PROJECT_REF    - Your project ref (the subdomain part of
+#                             your Supabase URL, e.g. "abcdefghij")
+#
+# REQUIRED SUPABASE SECRETS (set in Dashboard > Edge Functions > Secrets):
+#
+#   GEMINI_API_KEY           - Your Google Gemini API key
+# -------------------------------------------------------------------
