@@ -4,6 +4,7 @@
  */
 
 import { MarketDaily } from '../types';
+import { getAllTickers, updateNominalPrice } from './reitRegistry';
 
 // Cache structure: ticker -> array of price data
 const priceCache: Map<string, CachedPriceData> = new Map();
@@ -335,4 +336,33 @@ export const getCacheStats = (): { size: number; tickers: string[] } => {
     size: priceCache.size,
     tickers: Array.from(priceCache.keys()),
   };
+};
+
+/**
+ * Refresh registry nominal prices from live Yahoo Finance data.
+ * Fetches the most recent closing price for each ticker and updates
+ * the REIT registry so that fallback/mock data uses current prices.
+ *
+ * Call once at app startup. Failures are silent per-ticker —
+ * the hardcoded nominal price remains as fallback.
+ */
+export const refreshRegistryPrices = async (): Promise<void> => {
+  const tickers = getAllTickers();
+
+  const results = await Promise.allSettled(
+    tickers.map(async (ticker) => {
+      const prices = await fetchYahooEOD(ticker, 5); // last 5 days is enough
+      if (prices.length > 0) {
+        const latest = prices[prices.length - 1];
+        if (latest.close > 0) {
+          updateNominalPrice(ticker, Math.round(latest.close * 100) / 100);
+        }
+      }
+    })
+  );
+
+  const succeeded = results.filter(r => r.status === 'fulfilled').length;
+  if (succeeded > 0) {
+    console.log(`[MarketData] Updated ${succeeded}/${tickers.length} registry prices from Yahoo Finance`);
+  }
 };

@@ -40,13 +40,13 @@ const REIT_REGISTRY: REITRegistryEntry[] = [
   {
     id: '1', ticker: 'PLD', cik: '1045609', cikPadded: '0001045609',
     name: 'Prologis, Inc.', sector: Sector.INDUSTRIAL, propertyType: 'Logistics',
-    isActive: true, sharesOutstanding: 925, nominalPrice: 112,
+    isActive: true, sharesOutstanding: 925, nominalPrice: 132,
     description: 'Global leader in logistics real estate'
   },
   {
     id: '26', ticker: 'REXR', cik: '1571283', cikPadded: '0001571283',
     name: 'Rexford Industrial Realty', sector: Sector.INDUSTRIAL, propertyType: 'Logistics',
-    isActive: true, sharesOutstanding: 215, nominalPrice: 48,
+    isActive: true, sharesOutstanding: 215, nominalPrice: 42,
     description: 'Southern California industrial REIT'
   },
 
@@ -54,25 +54,25 @@ const REIT_REGISTRY: REITRegistryEntry[] = [
   {
     id: '2', ticker: 'EQR', cik: '906107', cikPadded: '0000906107',
     name: 'Equity Residential', sector: Sector.RESIDENTIAL, propertyType: 'Apartments',
-    isActive: true, sharesOutstanding: 378, nominalPrice: 72,
+    isActive: true, sharesOutstanding: 378, nominalPrice: 63,
     description: 'Multifamily apartment REIT'
   },
   {
     id: '8', ticker: 'AVB', cik: '915912', cikPadded: '0000915912',
     name: 'AvalonBay Communities', sector: Sector.RESIDENTIAL, propertyType: 'Apartments',
-    isActive: true, sharesOutstanding: 142, nominalPrice: 212,
+    isActive: true, sharesOutstanding: 142, nominalPrice: 178,
     description: 'High-quality multifamily communities'
   },
   {
     id: '30', ticker: 'ESS', cik: '920522', cikPadded: '0000920522',
     name: 'Essex Property Trust', sector: Sector.RESIDENTIAL, propertyType: 'Apartments',
-    isActive: true, sharesOutstanding: 64, nominalPrice: 285,
+    isActive: true, sharesOutstanding: 64, nominalPrice: 255,
     description: 'West Coast multifamily REIT'
   },
   {
     id: '32', ticker: 'MAA', cik: '912595', cikPadded: '0000912595',
     name: 'Mid-America Apartment Communities', sector: Sector.RESIDENTIAL, propertyType: 'Apartments',
-    isActive: true, sharesOutstanding: 117, nominalPrice: 155,
+    isActive: true, sharesOutstanding: 117, nominalPrice: 132,
     description: 'Sunbelt multifamily apartments'
   },
 
@@ -80,13 +80,13 @@ const REIT_REGISTRY: REITRegistryEntry[] = [
   {
     id: '3', ticker: 'O', cik: '726728', cikPadded: '0000726728',
     name: 'Realty Income Corp', sector: Sector.RETAIL, propertyType: 'Triple Net',
-    isActive: true, sharesOutstanding: 870, nominalPrice: 56,
+    isActive: true, sharesOutstanding: 870, nominalPrice: 67,
     description: 'The Monthly Dividend Company'
   },
   {
     id: '12', ticker: 'SPG', cik: '1063761', cikPadded: '0001063761',
     name: 'Simon Property Group', sector: Sector.RETAIL, propertyType: 'Malls',
-    isActive: true, sharesOutstanding: 326, nominalPrice: 150,
+    isActive: true, sharesOutstanding: 326, nominalPrice: 203,
     description: 'Premier shopping mall REIT'
   },
 
@@ -94,13 +94,13 @@ const REIT_REGISTRY: REITRegistryEntry[] = [
   {
     id: '19', ticker: 'BXP', cik: '1037540', cikPadded: '0001037540',
     name: 'BXP Inc.', sector: Sector.OFFICE, propertyType: 'Office',
-    isActive: true, sharesOutstanding: 157, nominalPrice: 75,
+    isActive: true, sharesOutstanding: 157, nominalPrice: 53,
     description: 'Premier office REIT (formerly Boston Properties)'
   },
   {
     id: '40', ticker: 'VNO', cik: '899689', cikPadded: '0000899689',
     name: 'Vornado Realty Trust', sector: Sector.OFFICE, propertyType: 'Office',
-    isActive: true, sharesOutstanding: 191, nominalPrice: 28,
+    isActive: true, sharesOutstanding: 191, nominalPrice: 40,
     description: 'NYC office and retail REIT'
   },
 
@@ -108,13 +108,13 @@ const REIT_REGISTRY: REITRegistryEntry[] = [
   {
     id: '41', ticker: 'INVH', cik: '1687229', cikPadded: '0001687229',
     name: 'Invitation Homes Inc.', sector: Sector.SFR, propertyType: 'Single Family Rental',
-    isActive: true, sharesOutstanding: 612, nominalPrice: 34,
+    isActive: true, sharesOutstanding: 612, nominalPrice: 27,
     description: 'Single-family rental homes'
   },
   {
     id: '42', ticker: 'AMH', cik: '1562401', cikPadded: '0001562401',
     name: 'American Homes 4 Rent', sector: Sector.SFR, propertyType: 'Single Family Rental',
-    isActive: true, sharesOutstanding: 365, nominalPrice: 36,
+    isActive: true, sharesOutstanding: 365, nominalPrice: 31,
     description: 'Single-family rental homes'
   },
 
@@ -122,19 +122,19 @@ const REIT_REGISTRY: REITRegistryEntry[] = [
   {
     id: '43', ticker: 'PSA', cik: '1393311', cikPadded: '0001393311',
     name: 'Public Storage', sector: Sector.SELF_STORAGE, propertyType: 'Self-Storage',
-    isActive: true, sharesOutstanding: 176, nominalPrice: 305,
+    isActive: true, sharesOutstanding: 176, nominalPrice: 300,
     description: 'Largest self-storage REIT'
   },
   {
     id: '44', ticker: 'EXR', cik: '1289490', cikPadded: '0001289490',
     name: 'Extra Space Storage', sector: Sector.SELF_STORAGE, propertyType: 'Self-Storage',
-    isActive: true, sharesOutstanding: 134, nominalPrice: 185,
+    isActive: true, sharesOutstanding: 134, nominalPrice: 151,
     description: 'Self-storage facilities'
   },
   {
     id: '45', ticker: 'CUBE', cik: '1298675', cikPadded: '0001298675',
     name: 'CubeSmart', sector: Sector.SELF_STORAGE, propertyType: 'Self-Storage',
-    isActive: true, sharesOutstanding: 222, nominalPrice: 48,
+    isActive: true, sharesOutstanding: 222, nominalPrice: 41,
     description: 'Self-storage operator'
   },
 
@@ -142,13 +142,13 @@ const REIT_REGISTRY: REITRegistryEntry[] = [
   {
     id: '46', ticker: 'HST', cik: '1070750', cikPadded: '0001070750',
     name: 'Host Hotels & Resorts', sector: Sector.LODGING, propertyType: 'Hotels',
-    isActive: true, sharesOutstanding: 708, nominalPrice: 16,
+    isActive: true, sharesOutstanding: 708, nominalPrice: 20,
     description: 'Luxury hotels and resorts'
   },
   {
     id: '47', ticker: 'RHP', cik: '1364479', cikPadded: '0001364479',
     name: 'Ryman Hospitality Properties', sector: Sector.LODGING, propertyType: 'Hotels',
-    isActive: true, sharesOutstanding: 55, nominalPrice: 125,
+    isActive: true, sharesOutstanding: 55, nominalPrice: 103,
     description: 'Convention hotels and entertainment'
   },
 ];
@@ -343,4 +343,21 @@ export function getRegistrySectors(): Sector[] {
 /** Get all tickers */
 export function getAllTickers(): string[] {
   return REIT_REGISTRY.map(r => r.ticker);
+}
+
+/**
+ * Update the nominal price for a ticker in the registry.
+ * Mutates both REIT_REGISTRY and the derived REITS array so all
+ * downstream consumers (mock data, market cap calculations, etc.)
+ * pick up the live price immediately.
+ */
+export function updateNominalPrice(ticker: string, price: number): void {
+  const entry = REIT_REGISTRY.find(r => r.ticker === ticker);
+  if (entry) {
+    entry.nominalPrice = price;
+  }
+  const reit = REITS.find(r => r.ticker === ticker);
+  if (reit) {
+    reit.nominalPrice = price;
+  }
 }

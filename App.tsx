@@ -41,6 +41,7 @@ const ConsensusEstimates = lazy(() => import('./components/ConsensusEstimates'))
 const Alerts = lazy(() => import('./components/Alerts'));
 import { REITS } from './services/mockData';
 import { fetchSECData, normalizeSECData } from './services/dataService';
+import { refreshRegistryPrices } from './services/marketDataService';
 import { useAuth } from './contexts/AuthContext';
 
 // ---------- Keyboard Shortcuts ----------
@@ -96,6 +97,11 @@ const App: React.FC = () => {
   // ===================================================================
   // Side-effects
   // ===================================================================
+
+  // Refresh registry prices from Yahoo Finance on startup
+  useEffect(() => {
+    refreshRegistryPrices();
+  }, []);
 
   // Fetch portfolios on load or auth change
   useEffect(() => {
